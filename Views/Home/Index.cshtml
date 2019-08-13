@@ -7,7 +7,7 @@
     <h1>Corso Bearzi 2019</h1>
 
     <h2>Docente</h2>
-    <p><a href="docente.html">Mauro Rainis</a></p>
+    <p><a href="@Url.Action("Docente", "Home")">Mauro Rainis</a></p>
 
     <h2>Studenti</h2>
     <ul>
@@ -24,14 +24,15 @@
         </ol>
     </div>
 
-    <div class="alert alert-danger" role="alert">
-        <h4 class="alert-heading">Quasi a posto</h4>
-        <p>Adesso abbiamo un layout corretto ma non funzionano ancora i link tra le pagine</p>
+    <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">Tutto ok</h4>
+        <p>Unico layout per tutte le pagine</p>
         <hr>
         <p class="mb-0">
-            Il layout è condiviso tra tutte le pagine.<br />
-            Bisogna aggiungere la pagina docente.<br />
-            Bisogna correggere i link (utilizzando gli HTML Helper).<br />
+            Metodi diversi per ottenere lo stesso link.<br />
+            Html.ActionLink() utilizzato nella navbar.<br />
+            UrlAction() utilizzato qua sopra.<br />
+
         </p>
     </div>
 </div>
