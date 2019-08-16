@@ -10,7 +10,7 @@
     <p><a href="@Url.Action("Docente", "Home")">Mauro Rainis</a></p>
 
     <h2>Studenti</h2>
-    @Html.Partial("ListaStudentiPartial")
+    <partial name="ListaStudentiPartial" />
 
     <h2>Programma del corso</h2>
     <div>
@@ -18,5 +18,11 @@
             <li>Introduzione a git e html</li>
             <li>Introduzione ai database</li>
         </ol>
+    </div>
+   
+    <div class="alert alert-success" role="alert">
+        <h4>Note:</h4>
+        Notare l'utilizzo di HTML helper e TAG helper nel menu e nella pagina Studenti.<br />
+        Entrambi producono lo stesso identico ouput, ma il codice di partenza è molto diverso (C# vs HTML).
     </div>
 </div>

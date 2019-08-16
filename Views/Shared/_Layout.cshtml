@@ -18,15 +18,21 @@
                     aria-expanded="false" aria-label="Toggle navigation"></button>
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    
+                    <!-- html helper -->
                     <li class="nav-item active">
                         @Html.ActionLink(
-                        "Home", // link text
+                        "Home (html)", // link text
                         "Index", // action name
                         "Home", // controller
                         new object { }, // optional route values
                         new { @class = "nav-link" } // html attributes
                         )
 
+                    </li>
+                    <!-- tag helper -->
+                    <li class="nav-item active">
+                        <a asp-controller="Home" asp-action="Index" class="nav-link">Home (tag)</a>
                     </li>
                     <li class="nav-item">
                         @Html.ActionLink(

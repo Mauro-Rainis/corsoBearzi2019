@@ -5,5 +5,15 @@
 
 <h1>Lista studenti</h1>
 
-@Html.Partial("ListaStudentiPartial")
+<h3>Html helper</h3>
+<!-- Utilizzo html helper -->
+@await Html.PartialAsync("ListaStudentiPartial")
+<!-- 
+    Per quanto riguarda utilizzo di Partial VS PartialAsync vedi 
+    https://stackoverflow.com/questions/28706124/when-to-use-await-html-partialasync-in-a-view-in-mvc-6 
+-->
 
+
+<h3>Tag helper</h3>
+<!-- Utilizzo tag helper (già asincrono) -->
+<partial name="ListaStudentiPartial" />
