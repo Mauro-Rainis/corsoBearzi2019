@@ -18,41 +18,15 @@
                     aria-expanded="false" aria-label="Toggle navigation"></button>
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    
-                    <!-- html helper -->
-                    <li class="nav-item active">
-                        @Html.ActionLink(
-                        "Home (html)", // link text
-                        "Index", // action name
-                        "Home", // controller
-                        new object { }, // optional route values
-                        new { @class = "nav-link" } // html attributes
-                        )
-
-                    </li>
                     <!-- tag helper -->
                     <li class="nav-item active">
-                        <a asp-controller="Home" asp-action="Index" class="nav-link">Home (tag)</a>
+                        <a asp-controller="Home" asp-action="Index" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        @Html.ActionLink(
-                        "Docente", // link text
-                        "Docente", // action name
-                        "Home", // controller
-                        new object { }, // optional route values
-                        new { @class = "nav-link" } // html attributes
-                        )
-
+                        <a asp-controller="Home" asp-action="Docente" class="nav-link">Docente</a>
                     </li>
                     <li class="nav-item">
-                        @Html.ActionLink(
-                        "Studenti", // link text
-                        "Index", // action name
-                        "Studenti", // controller
-                        new object { }, // optional route values
-                        new { @class = "nav-link" } // html attributes
-                        )
-
+                        <a asp-controller="Studenti" asp-action="Index" class="nav-link">Studenti</a>
                     </li>
                     <!-- <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>

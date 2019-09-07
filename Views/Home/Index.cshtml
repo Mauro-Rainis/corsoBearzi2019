@@ -7,7 +7,7 @@
     <h1>Corso Bearzi 2019</h1>
 
     <h2>Docente</h2>
-    <p><a href="@Url.Action("Docente", "Home")">Mauro Rainis</a></p>
+    <p><a asp-controller="Home" asp-action="Docente" class="nav-link">Mauro Rainis</a></p>
 
     <h2>Studenti</h2>
     <partial name="ListaStudentiPartial" />
@@ -21,8 +21,7 @@
     </div>
    
     <div class="alert alert-success" role="alert">
-        <h4>Note:</h4>
-        Notare l'utilizzo di HTML helper e TAG helper nel menu e nella pagina Studenti.<br />
-        Entrambi producono lo stesso identico ouput, ma il codice di partenza è molto diverso (C# vs HTML).
+        <h4>Esercizio 3</h4>
+        Recuperare l'elenco degli studenti utilizzando un servizio.
     </div>
 </div>
