@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CorsoBearziWebAppMvc.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -30,7 +31,7 @@ namespace CorsoBearziWebAppMvc
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-
+            services.AddScoped<IStudentiService,StudentiService>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 

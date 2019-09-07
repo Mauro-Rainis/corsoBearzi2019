@@ -5,11 +5,18 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using CorsoBearziWebAppMvc.Models;
+using CorsoBearziWebAppMvc.Services;
 
 namespace CorsoBearziWebAppMvc.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IStudentiService myStudentiService;
+
+        public HomeController(IStudentiService _studentiService)
+        {
+            myStudentiService = _studentiService;
+        }
         public IActionResult Index()
         {
             return View();
