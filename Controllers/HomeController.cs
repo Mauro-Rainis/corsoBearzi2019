@@ -19,7 +19,8 @@ namespace CorsoBearziWebAppMvc.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+            var lista = myStudentiService.GetAll();
+            return View(lista);
         }
 
         public IActionResult Docente()

@@ -1,4 +1,5 @@
-﻿@{
+﻿@model List<Studente>
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -10,7 +11,7 @@
     <p><a asp-controller="Home" asp-action="Docente" class="nav-link">Mauro Rainis</a></p>
 
     <h2>Studenti</h2>
-    <partial name="ListaStudentiPartial" />
+    <partial name="ListaStudentiPartial" model="@Model"/>
 
     <h2>Programma del corso</h2>
     <div>
@@ -21,7 +22,6 @@
     </div>
    
     <div class="alert alert-success" role="alert">
-        <h4>Esercizio 3</h4>
         <h4>Soluzione Esercizio 3</h4>
         Recuperare l'elenco degli studenti utilizzando un servizio.
         <ol>
@@ -30,6 +30,9 @@
             <li>Creo un servizio che implementa l'interfaccia</li>
             <li>Aggiungo il servizio alla classe Startup</li>
             <li>Inietto il servizio nei controller</li>
+            <li>Recupero lista studenti da servizio</li>
+            <li>Passo lista studenti alla vista</li>
+            <li>Richiamo la partial view passandogli la lista studenti</li>
         </ol>
     </div>
 </div>

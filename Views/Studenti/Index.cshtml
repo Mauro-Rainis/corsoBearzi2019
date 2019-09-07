@@ -1,10 +1,7 @@
-﻿
+﻿@model List<Studente>
 @{
     ViewData["Title"] = "Index";
 }
 
 <h1>Lista studenti</h1>
-
-<h3>Tag helper</h3>
-<!-- Utilizzo tag helper (già asincrono) -->
-<partial name="ListaStudentiPartial" />
+<partial name="ListaStudentiPartial" model="Model" />
