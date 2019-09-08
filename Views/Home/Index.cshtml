@@ -3,29 +3,32 @@
     ViewData["Title"] = "Home Page";
 }
 
-    <div class="container-fluid">
+<div class="container-fluid">
 
-        <h1>Corso Bearzi 2019</h1>
+    <h1>Corso Bearzi 2019</h1>
 
-        <h2>Docente</h2>
-        <p><a asp-controller="Home" asp-action="Docente" class="nav-link">Mauro Rainis</a></p>
+    <h2>Docente</h2>
+    <p><a asp-controller="Home" asp-action="Docente" class="nav-link">Mauro Rainis</a></p>
 
-        <h2>Studenti</h2>
-        <partial name="ListaStudentiPartial" model="@Model" />
+    <h2>Studenti</h2>
+    <partial name="ListaStudentiPartial" model="@Model" />
 
-        <h2>Programma del corso</h2>
-        <div>
-            <ol>
-                <li>Introduzione a git e html</li>
-                <li>Introduzione ai database</li>
-            </ol>
-        </div>
-
-        <div class="alert alert-success" role="alert">
-            <h4>Esercizio 4</h4>
-            <ul>
-                <li>Modificare il servizio per recuperare elenco studenti da database</li>
-                <li>Prevedere la possibilità che ogni studente possa iscriversi a N corsi contemporaneamente</li>
-            </ul>
-        </div>
+    <h2>Programma del corso</h2>
+    <div>
+        <ol>
+            <li>Introduzione a git e html</li>
+            <li>Introduzione ai database</li>
+        </ol>
     </div>
+
+    <div class="alert alert-success" role="alert">
+        <h4>Soluzione esercizio 4</h4>
+        <ol>
+            <li>Creo il database</li>
+            <li>Inserisco dei dati di esempio</li>
+            <li>Creo un DbContext</li>
+            <li>Creo le classi e il mapping</li>
+            <li>Lo aggiungo alle dipendenze del progetto</li>
+        </ol>
+    </div>
+</div>

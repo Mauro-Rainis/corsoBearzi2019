@@ -2,25 +2,24 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CorsoBearziWebAppMvc.EFCore;
 using CorsoBearziWebAppMvc.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace CorsoBearziWebAppMvc.Services
 {
     public class StudentiService : IStudentiService
     {
+        readonly CorsobearziContext ctx;
+        public StudentiService(CorsobearziContext ctx)
+        {
+            this.ctx = ctx;
+        }
         public List<Studente> GetAll()
         {
-            var lista = new List<Studente>
-            {
-                new Studente() { Nome = "Valentino", Cognome = "Rossi", Id = 1 },
-                new Studente() { Nome = "Marco", Cognome = "Pantani", Id = 2 },
-                new Studente() { Nome = "Alberto", Cognome = "Tomba", Id = 3 },
-                new Studente() { Nome = "Carolina", Cognome = "Kostner", Id = 4 },
-                new Studente() { Nome = "Valentina", Cognome = "Vezzali", Id = 5 },
-                new Studente() { Nome = "Elena", Cognome = "Cecchini", Id = 6 },
-                new Studente() { Nome = "Manuela", Cognome = "Di Centa", Id = 7 }
-            };
-            return lista;
+            return ctx.Studenti
+                .Include(c => c.Corso)
+                .ToList();
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿insert into corsi values (1,'Programmazione in C#',2019);
+﻿insert into corsi values (1,'Tecniche di programmazione avanzata per applicazioni client server',2019);
 
 insert into studenti values (1,'Vittorio','C.',1);
 insert into studenti values (2,'Jeffrey','A.',1);

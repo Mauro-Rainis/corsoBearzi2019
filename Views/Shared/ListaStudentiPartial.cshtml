@@ -1,8 +1,24 @@
 ﻿@model List<Studente>
 
-<ul>
-    @foreach (var s in Model)
-    {
-        <li>@s.Nome @s.Cognome</li>
-    }
-</ul>
+<table class="table table-hover col-4">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Corso</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var s in Model)
+        {
+            var corso = s.Corso?.Nome ?? " nessuno";
+        <tr>
+            <td>@s.Id</td>
+            <td>@s.Nome @s.Cognome</td>
+            <td>@corso</td>
+        </tr>
+        }
+            
+        </tbody>
+</table>

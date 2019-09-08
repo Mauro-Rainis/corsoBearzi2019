@@ -10,6 +10,9 @@ namespace CorsoBearziWebAppMvc.Models
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Cognome { get; set; }
+        public int? CorsoId { get; set; }
+
+        public virtual Corso Corso { get; set; }
 
         public override string ToString()
         {

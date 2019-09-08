@@ -10,7 +10,7 @@ namespace CorsoBearziWebAppMvc.Controllers
     public class StudentiController : Controller
     {
         private readonly IStudentiService myStudentiService;
-
+        
         public StudentiController(IStudentiService _studentiService)
         {
             myStudentiService = _studentiService;
@@ -18,8 +18,7 @@ namespace CorsoBearziWebAppMvc.Controllers
 
         public IActionResult Index()
         {
-            var lista = myStudentiService.GetAll();
-            return View(lista);
+            return View(myStudentiService.GetAll());
         }
 
 
